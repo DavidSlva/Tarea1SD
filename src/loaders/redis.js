@@ -1,16 +1,13 @@
 const redis = require('redis')
 
 const redis1 = redis.createClient({
-    host: 'redis1',
-    port: 6379
+    url: 'redis://127.0.0.1:6379'
 })
 const redis2 = redis.createClient({
-    host: 'redis2',
-    port: 6380
+    url: 'redis://127.0.0.1:6380'
 })
 const redis3 = redis.createClient({
-    host: 'redis3',
-    port: 6381
+    url: 'redis://127.0.0.1:6381'
 })
 const startRedis = async () => {
     const response1 = await redis1.connect()
